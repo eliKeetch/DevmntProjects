@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800');
+.main_section{
+  height: 100vh;
+  width: 100%;
+  background: #2C2B30;
+  padding-top: 216px;
+  padding-left: 60px;
+  padding-right: 10px;
+}
+.map{
+  position: absolute;
+  top: 100px;
+}
+.waves{
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+.intro_text{
+  color: #fff;
+  font-size: 32px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+.start_btn{
+  height: 35px;
+    width: 100px;
+    background: #2C2B30;
+    color: #C46BD6;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 9px;
+    border-color: #C46BD6;
+    font-size: 20px;
+
+}

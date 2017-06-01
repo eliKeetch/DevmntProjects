@@ -1,0 +1,56 @@
+.main_header{
+  width: 100%;
+height: 65px;
+background: lightgray;
+display: flex;
+justify-content: space-between;
+}
+.logo{
+  width: 200px;
+  height: 50px;
+  background: lightcoral;
+
+}
+.logo:nth-child(odd){
+  background: rebeccapurple;
+}
+nav{
+  width: 400px;
+  height: 30px;
+  background: lightcoral;
+
+}
+
+ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+li{
+  display: inline-block;
+}
+.main_wrapper{
+  display: flex;
+
+}
+.left_rail{
+height: 100vh;
+width: 65px;
+background: mediumpurple;
+}
+.main_content{
+  width: 100%;
+  height: 100vh;
+  background: gray;
+  /*display: flex;
+  flex-wrap: wrap;*/
+}
+.cards{
+  width: 200px;
+  height: 200px;
+  background: yellow;
+  border-radius: 10px;
+  float: left;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
