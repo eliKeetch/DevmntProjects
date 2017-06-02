@@ -1,0 +1,218 @@
+html {
+    font-size: 16px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+
+}
+
+p,a,li,button {
+    font-family: 'Open Sans', sans-serif;
+}
+.btn_container{
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 17%;
+  margin-top: 10px;
+
+
+}
+
+button {
+  display: inline-block;
+    font-weight: 600;
+    background: #bdd436;
+    text-align: center;
+    border: 2px;
+    border-color: #bdd436;
+    font-size: 18px;
+    border-radius: 25px;
+    width: 65%;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #fff;
+    padding: 11px 0px;
+    vertical-align: middle;
+
+}
+
+
+.main_header {
+    position: fixed;
+    width:100%;
+    height:80px;
+    padding: 0 16px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.top-section {
+    background: url("http://cdn01.wideopentech.com/themes/wot-2013-gm/_/img/wot-masthead-dark.jpg")center no-repeat;
+    background-size: cover;
+    padding-top:100px ;
+    color: #fff;
+}
+
+.top-section h1 {
+
+
+}
+.sub_container{
+  position: relative;
+  padding: 0 23%;
+  text-align: center;
+  display: inline-block;
+}
+.sub{
+font-size: 18px;
+font-weight: 500;
+
+}
+
+
+.sub_container::before {
+    content: " ";
+    display: block;
+    background: #fff;
+    height: 9px;
+    width: 15%;
+    position: absolute;
+    left: 5%;
+  top: 25%;
+  margin-right: 10px;
+
+}
+.sub_container::after{
+  content: " ";
+  display: block;
+  background: #fff;
+  height: 9px;
+  width: 15%;
+  position: absolute;
+  right: 5%;
+  top: 25%;
+  margin-left: 10px;
+}
+.top-section h1 small{
+  font-size: 24px;
+  font-weight: 500;
+  display: block;
+  color: #fff;
+  text-align: center;
+
+}
+.title{
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: inherit;
+  font-weight: 300;
+  text-align: center;
+
+}
+.align_all{
+  text-align: center;
+}
+.HAM {
+    width:27px;
+    height:27px;
+    position: absolute;
+    right: 5%;
+    fill: gray;
+}
+.main_nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.nav_container{
+
+  height: 65px;
+  width: 60%;
+  background: #fff;
+  align-items: center;
+  position: absolute;
+  right: 70px;
+  letter-spacing: 1px;
+  top: 0;
+background: transparent;
+
+}
+.nav_container ul{
+  padding-top: 30px;
+  width:100%;
+  color: #fff;
+  display: none;
+  justify-content: space-between;
+
+}
+.title_container{
+  padding: 10%;
+  width: 100%;
+  align-items: center;
+
+}
+.img_width{
+  height: 50px;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+
+
+}
+#color_orange {
+  color: #ff830a;
+}
+.second_part{
+width: 100%;
+height: 100vh;
+background: lightgray;
+}
+@media(min-width:770px){
+.title{
+  font-size: 155px;
+}
+.sub{
+  font-size: 30px;
+}
+.top-section h1 small{
+  font-size: 45px;
+  text-align: left;
+}
+.main_header {
+  background: transparent;
+}
+.img_width{
+  top: 30px;
+
+}
+
+
+.HAM{
+  top: 40px;
+}
+
+}
+@media(min-width:1000px){
+  .nav_container ul{
+    display: flex;
+  }
+  button{
+    width: 400px;
+    height: 40px;
+  }
+  .HAM{
+    display: none;
+
+  }
+}
