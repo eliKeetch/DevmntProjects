@@ -3,7 +3,8 @@ const initialState ={
     error: false,
     loading: false,
     search: false,
-    pokemon: {results: []}
+    pokemon: {results: []},
+    selectedPokemon: null
 };
 
 
@@ -34,6 +35,10 @@ export default function pokemon( state = initialState, action ){
                 search: false,
                 pokemon: {results: []}
             }
+            case POKEMON_DETAILS + '_PENDING':
+            return state
+            case POKEMON_DETAILS + '_FULFILLED':
+            return Object.assign({}, state, {selectedPokemon: action.payload})
         default: return state;
     }
 }
@@ -45,6 +50,8 @@ export function setPokemon(){
         payload: promise
     }
 }
+
+
 
 export function pokemonDetails(url) {
     const promise = axios.get(url).then(response => response.data);

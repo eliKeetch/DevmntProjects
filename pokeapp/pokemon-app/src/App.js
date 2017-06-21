@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import pokelogo from './pokemon.png';
 import './App.css';
 import {connect} from "react-redux";
-import {setPokemon} from './ducks/pokemon';
+import {setPokemon, pokemonDetails} from './ducks/pokemon';
 import PokemonListing from './components/PokemonListing';
 import PokemonData from './components/PokemonData/PokemonData';
 class App extends Component {
@@ -15,17 +15,18 @@ class App extends Component {
           <h4>I wanna be the very best, like no one ever was!</h4>
         </div>
         <div>
-          <input type="text"/><button onClick={this.props.setPokemon}>search for pokemon</button>
+          <div className="pokemon-search"><input type="text"/><button onClick={this.props.setPokemon}>search for pokemon</button></div>
+
           <div className="pokemon-list-yo">
             {console.log(this.props.pokemon.results)}
               {this.props.pokemon.results.map((element, index)=>{
                 return(
-                  <PokemonListing pokemon={element} key={index} />
+                  <PokemonListing pokemon={element} key={index} pokemonDetails={this.props.pokemonDetails} />
                 )
               })}
           </div>
           <div className="pokemon-display-case">
-            <PokemonData />
+            <PokemonData selectedPokemon={this.props.selectedPokemon} />
           </div>
         </div>
       </div>
@@ -35,5 +36,5 @@ class App extends Component {
 function mapStateToProps(state){
   return state;
 }
-export default connect(mapStateToProps, {setPokemon})(App);
+export default connect(mapStateToProps, {setPokemon, pokemonDetails})(App);
 // export default App;

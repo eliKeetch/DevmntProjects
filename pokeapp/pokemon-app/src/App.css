@@ -34,10 +34,23 @@ body {
 .pokemon-list-yo {
   width: 30vw;
   border-right: 1px solid black;
+  display: inline-block;
 }
 .pokemon-list-card {
   background: lightblue;
   border-radius: 10px;
   padding: 20px;
   margin: 20px;
+}
+.pokemon-display-case{
+  display: inline-block;
+  vertical-align: top;
+  width: 65vw;
+
+}
+.pokemon-search {
+  width: 100%;
+}
+.pokemon-title {
+  font-size: 30px;
 }
