@@ -1,70 +1,78 @@
 .App {
   text-align: center;
   -webkit-font-smoothing: none;
-  font-family: 'pokemon-font', monospace; }
-
+  font-family: 'pokemon-font', monospace;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px; }
-
+  height: 80px;
+}
 .App-header {
   background-color: #222;
   height: 150px;
   padding: 50px 0;
   color: white;
-  margin-bottom: 20px; }
-
+  margin-bottom: 20px;
+}
 .App-header h4,
 .App-header h1 {
   padding: 0;
-  margin: 0; }
-
+  margin: 0;
+}
 .App-intro {
-  font-size: large; }
-
+  font-size: large;
+}
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate3d(360, 360, 360, 360deg); } }
+  from { transform: rotate(0deg); }
+  to { transform: rotate3d(360, 360, 360, 360deg); }
+}
+
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "pokemon-font"; }
-
+  font-family: 'pokemon-font', ;
+}
 .pokemon-list-yo {
   width: 30vw;
   border-right: 1px solid black;
-  display: inline-block; }
-
+  display: inline-block;
+}
 .pokemon-list-card {
   background: lightblue;
   border-radius: 10px;
   padding: 20px;
-  margin: 20px; }
-
-.pokemon-display-case {
+  margin: 20px;
+}
+.pokemon-display-case{
   display: inline-block;
   vertical-align: top;
-  width: 65vw; }
+  width: 65vw;
 
+}
 .pokemon-search {
-  width: 100%; }
-
+  width: 100%;
+}
 .pokemon-title {
-  font-size: 30px; }
-
+  font-size: 30px;
+  
+}
 .pokemon-searc-btn {
   background-color: lightblue;
   height: 30px;
-  border-radius: 10px; }
-
+  border-radius: 10px;
+}
 .pokemon-ul-details {
   display: inline-block;
-  text-align: left;
-  font-size: 15px; }
-
+ text-align: left;
+  font-size: 15px;
+}
 .pokemon-ul {
   padding-left: 35vw;
-  text-align: left; }
+  text-align: left;
+}
+.item-bold {
+  font-size: 30px;
+   
+}
+
