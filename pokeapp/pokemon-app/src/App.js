@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import pokelogo from './pokemon.png';
+import pokelogo from './newpokeball.png';
+import pokeTitle from './pokeTitle.gif';
+import pokedex from './pokedex.png';
 import './App.css';
+
 import {connect} from "react-redux";
 import {setPokemon, pokemonDetails} from './ducks/pokemon';
 import PokemonListing from './components/PokemonListing';
@@ -11,26 +14,39 @@ class App extends Component {
     super(props);
 
     this.state = {
-     pokemon: {} 
+     pokemon: {},
+     showStats: false
     }
   }
 
+  toggleStats() {
+    this.setState(Object.assign({}, this.state, {showStats: !this.state.showStats}))
+  }
+
 componentDidMount() {
-   setPokemon()
+   this.props.setPokemon()
     
 }
 
 
   render() {
+  
+
     return (
       <div className="App">
         <div className="App-header">
+          <div className="header-condoments">
           <img src={pokelogo} className="App-logo" alt="logo" />
-          <h1>POKEDEX</h1>
-          <h4>I wanna be the very best, like no one ever was!</h4>
+          <div>
+          <img src={pokeTitle} className="pokeTitle" alt="pokeTitle" />
+          </div>
+          <h1 className="test" >POKEDEX</h1>
+          </div>
+          
+          
         </div>
         <div>
-          <div className="pokemon-search"><button className="pokemon-searc-btn" onClick={this.props.setPokemon}>Load Pokemon</button></div>
+          
 
           <div className="pokemon-list-yo">
             {console.log(this.props.pokemon.results)}
@@ -39,10 +55,21 @@ componentDidMount() {
                   <PokemonListing pokemon={element} key={index} pokemonDetails={this.props.pokemonDetails} />
                 )
               })}
-              <button className="next-set">Next Set Of Pokemon </button>
+              <button className="set-pokemon" onClick={() => this.props.setPokemon(this.props.pokemon.previous)}>Previous</button>
+              <button className="set-pokemon" onClick={() => this.props.setPokemon(this.props.pokemon.next)}>Next</button>
+              
+          {console.log(this.props.pokemon.next)}
           </div>
           <div className="pokemon-display-case">
-            <PokemonData selectedPokemon={this.props.selectedPokemon} />
+            <div className="pokeDiv">
+            <img className="pokedexImg" src={pokedex} alt="Pokedex" />
+            <button onClick={() => this.toggleStats()} className="pokedex-stat-btn"> STATS</button>
+            <PokemonData selectedPokemon={this.props.selectedPokemon} showStats={this.state.showStats} />
+            </div>
+          
+   
+             
+            
           </div>
         </div>
       </div>

@@ -42,14 +42,15 @@ export default function pokemon( state = initialState, action ){
         default: return state;
     }
 }
-export function setPokemon(){
+export function setPokemon(url="http://pokeapi.co/api/v2/pokemon"){
     console.log("woring set pokemon")
-    const promise = axios.get("http://pokeapi.co/api/v2/pokemon").then(response => response.data);
+    const promise = axios.get(url).then(response => response.data);
     return {
         type: SET_POKEMON,
         payload: promise
     }
 }
+
 
 
 
