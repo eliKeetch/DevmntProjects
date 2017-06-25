@@ -41,6 +41,9 @@ body {
   width: 30vw;
   border-right: 1px solid black;
   display: inline-block;
+  height: 700px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .pokemon-list-card {
   background: darkblue;
@@ -70,14 +73,14 @@ body {
 .pokemon-ul-details {
   display: inline-block;
  text-align: left;
-  font-size: 15px;
+  font-size: 10px;
 }
 .pokemon-ul {
-  padding-left: 35vw;
+font-size: 10px;
   text-align: left;
 }
 .item-bold {
-  font-size: 20px;
+  font-size: 10px;
   font-weight: 700;
    
 }
@@ -88,8 +91,8 @@ body {
   margin: 10px;
 }
 .pokemon-text {
-  font-size: 15px;
-  font-weight: 900;
+  font-size: 5px;
+  font-weight: 500;
 }
 .pokeTitle {
   max-height: 90px;
@@ -126,9 +129,15 @@ body {
 .img-size {
 
   height: 150px;
+  
 }
 .img-size2 {
   height: 75px;
+  position: absolute;
+  left: 0px;
+  display: inline-block;
+  
+  
 }
 .test {
   font-family: 'pokemon-font', Arial, Helvetica, sans-serif !important;
@@ -137,9 +146,11 @@ body {
   
   position: absolute;
   top: 167px;
-  left: 130px;
+  left: 110px;
   height: 150px;
-  width: 200px;
+  width: 230px;
+  overflow-y: scroll;
+  overflow-x: hidden;
   
 }
 .pokedexImg {
@@ -176,7 +187,22 @@ body {
   top: 180px;
   left: 510px;
 }
+.stats-div {
+  height: 150px;
+  width: 200px;
+  position: absolute;
+  display: none;
 
-
-
+}
+.stats-div2 
+.pokemon-p-details
+{
+  text-align: left;
+  display: inline-block;
+font-size: 10px;
+  
+  }
+  .weight-height-spec {
+    padding-left: 50px;
+  }
 
